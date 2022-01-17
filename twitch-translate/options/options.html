@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  
+  <style>
+   textarea {
+    resize: none; /* Запрещаем изменять размер */
+   } 
+  </style>
+  
+  <body>
+    <label for="tt-api">API перевода</label>
+    <select id="tt-api" class="browser-style">
+      <option value="googleTrans">Google Translate</option>
+      <option value="yandexTrans">Яндекс Переводчик</option>
+    </select>
+    <br>
+    <label for="tt-language">Язык перевода</label>
+    <select id="tt-language" class="browser-style">
+      <option value="ru_RU">[RU] Русский</option>
+      <option value="en_EN">[EN] Английский</option>
+      <option value="de_DE">[DE] Немецкий</option>
+      <option value="fr_FR">[FR] Французский</option>
+      <option value="es_ES">[ES] Испанский</option>
+    </select>
+    <br>
+    
+   Интервал перевода:
+   <input type="number"
+      id="time_translate"
+      name="time_translate">
+    <br>
+    
+    Каналы для перевода (имя канала, 1- авто, 0 - вручную):
+    <br>
+    <textarea id="twitch-table" cols=40 rows=5></textarea>
+    <br>
+    
+    <button id="clear" class="browser-style">Очистить</button>
+    <button id="save" class="browser-style">Сохранить</button>
+    
+    <script src="options.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,46 @@
+{
+
+  "description": "Перевод чата Твича с помощью Google Translate",
+  "manifest_version": 2,
+  "name": "TwitchChatTranslate",
+  "version": "1.0",
+  
+  "icons": {
+    "48": "icons/beasts-48.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "*://*.twitch.tv/*",
+    "storage"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitch.tv/*"],
+      "js": ["content_scripts/tct.js"]
+    }
+  ],
+ 
+  "browser_action": {
+    "default_icon": "icons/beasts-32.png",
+    "theme_icons": [{
+        "light": "icons/beasts-32-light.png",
+        "dark": "icons/beasts-32.png",
+        "size": 32
+    }],
+    "default_title": "TwitchChatTranslate",
+    "default_popup": "popup/popup.html",
+    "browser_style": true
+  },
+
+  "options_ui": {
+    "page": "options/options.html",
+    "browser_style": true
+  },
+
+  "background": {
+    "scripts": ["storage/storage.js"]
+  }
+
+}
