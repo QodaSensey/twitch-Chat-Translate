@@ -1,10 +1,17 @@
 {
 
-  "description": "Перевод чата Твича с помощью Google Translate",
+  "description": "Перевод чата Твича с помощью Google Translate и Яндекс переводчик (в будущем)",
   "manifest_version": 2,
   "name": "TwitchChatTranslate",
   "version": "1.0",
   
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "addon2@example2.com",
+      "strict_min_version": "55.0"
+    }
+   },
+   
   "icons": {
     "48": "icons/beasts-48.png"
   },
